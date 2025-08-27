@@ -2,3 +2,55 @@
     padding: 0;
     margin: 0;
 }
+:root{
+    --font-Gildeon: "Gildeon", sans-serif;
+    --font-Khofira: "Khofira", sans-serif;
+    --font-Montserrat: "Montserrat", sans-serif;
+    --font-Muthiara: "Muthiara", sans-serif;
+}
+@font-face {
+    font-family: Gildeon;
+    src: url(../Fonts/Gildeon.otf) format(opentype);
+}
+@font-face {
+    font-family: Khofira;
+    src: url(../Fonts/Khofira.ttf) format(opentype);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat.ttf) format(opentype);
+}
+@font-face {
+    font-family: Muthiara;
+    src: url(../Fonts/Muthiara\ demo.otf) format(opentype);
+}
+
+/* OPENING SECTION CSS*/
+.opening-section{
+    width: 100%;
+    height: 100%;
+}
+.heading-text{
+    border: 1px solid black;
+    background-color: aliceblue;
+    
+}
+.heading-text span{
+    font-size: 15rem;
+    display: flex;
+    justify-content: center;
+}
+.tag{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+.tag .bar{
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 10%;
+    border: 1px solid black;
+    background-color: rgb(114, 146, 173);
+}
