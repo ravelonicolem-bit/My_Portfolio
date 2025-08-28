@@ -48,10 +48,38 @@ navbarContainer.appendChild(navbar);
 // Styling
 const style = document.createElement("style");
 style.innerHTML = `
-
+    :root{
+        --font-Gildeon: "Gildeon", sans-serif;
+        --font-Khofira: "Khofira", sans-serif;
+        --font-Montserrat: "Montserrat", sans-serif;
+        --font-Muthiara: "Muthiara", sans-serif;
+        --files-text: "Files";
+    }
+    @font-face {
+        font-family: Gildeon;
+        src: url(../Fonts/Gildeon.otf) format(opentype);
+    }
+    @font-face {
+        font-family: Khofira;
+        src: url(../Fonts/Khofira.ttf) format(opentype);
+    }
+    @font-face {
+        font-family: Montserrat;
+        src: url(../Fonts/Montserrat.ttf) format(opentype);
+    }
+    @font-face {
+        font-family: Muthiara;
+        src: url(../Fonts/Muthiara\ demo.otf) format(opentype);
+    }
+    body{
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+    }
     .navbar {
         width: 80vw;
-        height: 100px;
+        height: 50vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -114,5 +142,6 @@ style.innerHTML = `
         background: #FFFCF5;
         color: #690A08;
     }
+
 `;
 document.head.appendChild(style);
