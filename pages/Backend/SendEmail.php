@@ -6,7 +6,6 @@ require __DIR__ . '../PHPMailer/src/Exception.php';
 require __DIR__ . '../PHPMailer/src/PHPMailer.php';
 require __DIR__ . '../PHPMailer/src/SMTP.php';     
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name    = $_POST['name'] ?? '';
     $email   = $_POST['email'] ?? '';
@@ -15,16 +14,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail = new PHPMailer(true);
 
     try {
-        $mail->SMTPDebug  = 2;  // 🔴 Debugging enabled
+        $mail->SMTPDebug  = 2;  // Debugging enabled
         $mail->Debugoutput = 'html';
 
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'ravelonicole.m@gmail.com';
-        $mail->Password   = 'yjyvzvgnevqyjnnk';
+        $mail->Password   = 'yjyvzvgnevqyjnnk'; // App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
+
+        // ✅ SSL Options Fix
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer'       => false,
+                'verify_peer_name'  => false,
+                'allow_self_signed' => true
+            ]
+        ];
 
         $mail->setFrom('ravelonicole.m@gmail.com', 'Website Contact Form');
         $mail->addReplyTo($email, $name);

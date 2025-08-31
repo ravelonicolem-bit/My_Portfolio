@@ -8,12 +8,10 @@
 </head>
 <body>
 
-  <h1>GET IN TOUCH</h1>
-  
   <div class="contact-container">
+    <h1>GET IN TOUCH</h1>
     <div class="contact-box">
 
-      <!-- Left Info -->
       <div class="contact-info">
         <h2>Contact for more Info</h2>
         <p>Feel free to contact any time, will get back to you soon as I can</p>

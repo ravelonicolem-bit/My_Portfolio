@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Pages/Styles/Navbar.css">
     <link rel="stylesheet" href="Pages/Styles/Main.css">
     <link rel="stylesheet" href="Pages/Styles/Android.css">
+    <link rel="stylesheet" href="Pages/Styles/Email.css">
 </head>
 <body>
     <div class="main-content">
@@ -17,6 +18,14 @@
 
             <div class="opening-section">
                 <?php include 'Pages/Opening.html';?>
+            </div>
+
+            <div class="software-section">
+                <?php include 'Pages/Software.html';?>
+            </div>
+
+            <div class="contact-container">
+                <?php include 'Pages/Email.php';?>
             </div>
         </div>
     </div>
