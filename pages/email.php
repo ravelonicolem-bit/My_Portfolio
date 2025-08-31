@@ -25,7 +25,7 @@
       <!-- Right Form -->
       <div class="contact-form">
         <h2>Send Email</h2>
-        <form action="Backend/PHP/SendEmail.php" method="POST">
+        <form action="Backend/SendEmail.php" method="POST">
           <div class="form-group">
             <label>Your Name</label>
             <input type="text" name="name" required>
