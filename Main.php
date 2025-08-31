@@ -3,31 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Pages/Styles/Android.css" media="screen and (max-width: 768px)">
+    <title>MAIN PORTFOLIO</title>
+    <link rel="stylesheet" href="Pages/Styles/Navbar.css">
     <link rel="stylesheet" href="Pages/Styles/Main.css">
-    <link rel="stylesheet" href="Pages/Styles/navbar.css">
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Pages/Styles/Android.css">
 </head>
-<body> 
-    <section>
-        <!-- Navbar -->
-        <?php include __DIR__ . '/Pages/Navbar.html'; ?>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <div class="navbar" id="nav">
+                <?php include 'Pages/Navbar.html';?>
+            </div>
 
-        <!-- Main Page -->
-        <div class="Main-Page">
-            <?php include __DIR__ . '/Pages/Opening.html'; ?>
+            <div class="opening-section">
+                <?php include 'Pages/Opening.html';?>
+            </div>
         </div>
-
-        <!-- Skills Page -->
-        <div class="Skill-Page">
-            <!-- Future skills content -->
-        </div>
-
-        <!-- Contacts Page -->
-        <div class="Contacts-Page">
-            <!-- Future contacts content -->
-        </div>
-    </section>
-
+    </div>
 </body>
 </html>

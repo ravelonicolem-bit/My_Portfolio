@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-    <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="stylesheet" href="Styles/Navbar.css">
     <link rel="stylesheet" href="Styles/Android.css">
     <link rel="stylesheet" href="Styles/Main.css">
 </head>
 <body>
-    <div class="navbar" id="nav"></div>
+<!-- Navbar Container -->
+<div id="nav">
+  <div class="navbar">
+    <!-- Left side -->
+    <div class="navLeft">•PORTFOLIO•</div>
 
-    <script src="Backend/JS/Navbar.js"></script>
+    <!-- Right side -->
+    <div class="navRight">
+      <!-- Profile picture -->
+      <div class="profileContainer">
+        <img src="../Img/chibi-me.png" alt="Profile" class="profilePic">
+      </div>
+
+      <!-- Button -->
+      <div class="buttonContainer">
+        <button class="download-btn" onclick="alert('Downloading Files...')">
+          DOWNLOAD FILES
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
