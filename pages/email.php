@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get In Touch</title>
-  <link rel="stylesheet" href="Pages/Styles/Email.css">
+  <link rel="stylesheet" href="Styles/Email.css">
 </head>
 <body>
 
@@ -24,7 +25,7 @@
       <!-- Right Form -->
       <div class="contact-form">
         <h2>Send Email</h2>
-        <form action="backend/sendemail.php" method="POST">
+        <form action="Backend/PHP/SendEmail.php" method="POST">
           <div class="form-group">
             <label>Your Name</label>
             <input type="text" name="name" required>

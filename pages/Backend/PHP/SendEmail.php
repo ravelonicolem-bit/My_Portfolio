@@ -4,7 +4,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require __DIR__ . '/../PHPMailer/src/Exception.php';
 require __DIR__ . '/../PHPMailer/src/PHPMailer.php';
-require __DIR__ . '/../PHPMailer/src/SMTP.php';
+require __DIR__ . '/../PHPMailer/src/SMTP.php';     
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name    = $_POST['name'] ?? '';
@@ -20,14 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'yourgmail@gmail.com'; // must match setFrom
-        $mail->Password   = 'your_16_char_app_password'; 
+        $mail->Username   = 'ravelonicole.m@gmail.com'; // must match setFrom
+        $mail->Password   = 'yjyv zvgn evqy jnnk'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('yourgmail@gmail.com', 'Website Contact Form');
+        $mail->setFrom('ravelonicole.m@gmail.com', 'Website Contact Form');
         $mail->addReplyTo($email, $name);
-        $mail->addAddress('yourgmail@gmail.com');
+        $mail->addAddress('ravelonicole.m@gmail.com');
 
         $mail->isHTML(true);
         $mail->Subject = "New Contact Form Message from $name";
