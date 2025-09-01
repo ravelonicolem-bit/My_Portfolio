@@ -6,8 +6,7 @@
     <title>MAIN PORTFOLIO</title>
     <link rel="stylesheet" href="Pages/Styles/Navbar.css">
     <link rel="stylesheet" href="Pages/Styles/Main.css">
-    <link rel="stylesheet" href="Pages/Styles/Android.css">
-    <link rel="stylesheet" href="Pages/Styles/Email.css">
+    <!-- <link rel="stylesheet" href="Pages/Styles/Android.css"> -->
 </head>
 <body>
     <div class="main-content">
