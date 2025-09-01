@@ -20,7 +20,7 @@ html, body {
   --font-Gildeon: "Gildeon", sans-serif;
   --font-Khofira: "Khofira", sans-serif;
   --font-Montserrat: "Montserrat", sans-serif;
-  --font-Muthiara: "Muthiara", sans-serif;
+  --font-Electric: "Electric", sans-serif;
   --font-Designer: "Designer", sans-serif;
   --font-MontD: "Heavy", sans-serif;
 }
@@ -39,8 +39,8 @@ html, body {
   src: url("../Fonts/Montserrat.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Muthiara";
-  src: url("../Fonts/Muthiara demo.otf") format("opentype");
+  font-family: "Electric";
+  src: url("../Fonts/Electric-Formula-Italic.ttf") format("opentype");
 }
 @font-face {
   font-family: "Designer";
@@ -124,7 +124,9 @@ html, body {
   margin-top: 50px;
 }
 .heading-text span {
-  font-family: var(--font-Muthiara);
+  font-family: var(--font-Electric);
+  -webkit-text-fill-color: #F0EDE5;
+  letter-spacing: 10px;
   font-size: 10rem;
   display: flex;
   justify-content: center;
