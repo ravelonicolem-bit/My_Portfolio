@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Skills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 24px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+        .skill-card {
+            background: #f9fafb;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            padding: 20px 28px;
+            min-width: 180px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .skill-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #0078d7;
+        }
+        .skill-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #222;
+        }
+    </style>
+    <!-- Optionally include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Software Skills</h1>
+        <div class="skills-list">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <div class="skill-name">HTML5</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <div class="skill-name">CSS3</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                <div class="skill-name">JavaScript</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                <div class="skill-name">React</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                <div class="skill-name">Node.js</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <div class="skill-name">Python</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-name">SQL</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <div class="skill-name">Git</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
