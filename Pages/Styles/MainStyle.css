@@ -50,6 +50,7 @@ html, body {
   font-family: "Heavy";
   src: url("../Fonts/Mont-HeavyDEMO.otf") format("opentype");
 }
+
 /* Navbar */
 .navbar {
   width: 80vw;
@@ -113,21 +114,20 @@ html, body {
   color: #690A08;
 }
 
-
 /* FIRST-PAGE CSS */
 .opening-section {
   width: 100%;
-  height: 50;
+  height: 60vh;
 }
 .section-page {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20vh;
 }
 .heading-text span {
   font-family: var(--font-Electric);
   -webkit-text-fill-color: #F0EDE5;
   letter-spacing: 10px;
-  font-size: 10rem;
+  font-size: 12rem;
   display: flex;
   justify-content: center;
 }
@@ -137,6 +137,7 @@ html, body {
   gap: 50px;
 }
 .tag .bar {
+  margin-top: 5vh;
   font-family: var(--font-Khofira);
   text-align: center;
   padding: 15px;
@@ -272,4 +273,62 @@ html, body {
 .status-message {
   margin-top: 10px;
   font-size: 14px;
+}
+
+/* SOFTWARE SKILLS PAGE CSS */
+  .skill-container {
+    max-width: 85%;
+    border-radius: 8px;
+    padding: 32px;
+    margin-left: 100px;
+}
+
+#txt-skill h1 {
+    font-family: var(--font-MontD);
+    text-align: center;
+    color: #F0EDE5;
+    margin-bottom: 24px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.skill-card {
+    background: #f9fafb;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px 28px;
+    min-width: 180px;
+    text-align: center;
+    transition: all 0.3s ease; /* smoother hover */
+}
+
+.skill-card:hover {
+  background: rgba(0, 0, 0, 0.5); /* card bg changes */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* card shadow */
+}
+
+.skill-card:hover .skill-name {
+  color: #F0EDE5; /* text color changes */
+}
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0078d7;
+}
+
+.skill-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
 }

@@ -27,7 +27,7 @@
     <?php include 'Pages/First-Page.html'?>
 </section>
 <section class="skills">
-    
+    <?php include 'Pages/Skills-Page.html'?>
 </section>
 <section class="email">
      
