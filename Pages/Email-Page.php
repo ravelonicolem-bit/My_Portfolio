@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,17 +19,17 @@
                         <p>Feel free to contact any time, will get back to you soon as I can</p>
                         <div class="context">
                         <div class="item">
-                            <img src="/Img/gmail.png" alt="">
+                            <img src="Pages/Image/gmail.png" alt="">
                             <p>ravelonicole.m@gmail.com</p>
                         </div>
 
                         <div class="item">
-                            <img src="/Img/Phone.png" alt="">
+                            <img src="Pages/Image/Phone.png" alt="">
                             <p>0976-229-1339</p>
                         </div>
 
                         <div class="item">
-                            <img src="/Img/Location.png" alt="">
+                            <img src="Pages/Image/Location.png" alt="">
                             <p>102 J.P Rizal St. Sabutan, Silang, Cavite</p>
                         </div>
                     </div>

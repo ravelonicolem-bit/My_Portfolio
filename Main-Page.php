@@ -26,11 +26,14 @@
 <section class="center">
     <?php include 'Pages/First-Page.html'?>
 </section>
+<section class="summary">
+    <?php include 'Pages/Summary-Page.html'?>
+</section>
 <section class="skills">
     <?php include 'Pages/Skills-Page.html'?>
 </section>
 <section class="email">
-     
+     <?php include 'Pages/Email-Page.php'?>
 </section>
 <script src="Pages/Backend/DBtn.js"></script>
 </body>
