@@ -352,6 +352,7 @@ html, body {
     padding: 10px;
     color: #F0EDE5;
     margin-top: 10vh;
+    padding: 30px;
     }
   .sidebar h2{
     font-family: var(--font-Designer);
@@ -520,6 +521,7 @@ html, body {
       display: flex;
       align-items: center;
       font-family: var(--font-Montserrat);
+      font-size: 13px;
     }
 
     /* ===== Middle Column ===== */
