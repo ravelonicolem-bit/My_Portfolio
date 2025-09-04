@@ -1,9 +1,11 @@
 <?php
 $zip = new ZipArchive();
-$zipFile = __DIR__ . "/Files/all_pdf.zip"; // ✅ absolute path
+
+// go up 2 levels (../../) to reach PORTFOLIO/Files
+$filesDir = __DIR__ . "/Files";
+$zipFile = $filesDir . "all_pdf.zip"; 
 
 // Make sure the Files directory exists and is writable
-$filesDir = __DIR__ . "/Files";
 if (!is_dir($filesDir)) {
     die("❌ The directory 'Files' does not exist at: $filesDir");
 }
@@ -13,8 +15,8 @@ if (!is_writable($filesDir)) {
 
 if ($zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
     $files = [
-        __DIR__ . "/Files/RAVELO_RESUME.pdf",
-        __DIR__ . "/Files/Certificate_of_Completion.pdf"
+        $filesDir . "/RAVELO_ RESUME.pdf",
+        $filesDir . "/Certificate_of_Completion.pdf"
     ];
 
     foreach ($files as $file) {
@@ -31,7 +33,7 @@ if ($zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
         header("Content-Disposition: attachment; filename=all_pdfs.zip");
         header("Content-Length: " . filesize($zipFile));
         readfile($zipFile);
-        unlink($zipFile);
+        unlink($zipFile); // delete after download
         exit;
     } else {
         echo "❌ ZIP file is empty or missing.";
@@ -39,3 +41,4 @@ if ($zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
 } else {
     echo "❌ Failed to create ZIP File at: $zipFile";
 }
+?>
