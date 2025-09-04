@@ -12,7 +12,7 @@
 html, body {
   width: 100%;
   /* height: 100%; */
-  background: #071A3B;
+  background: #2A323F;
   color: #FFFCF5;
 }
 /* Root Variables */
@@ -53,6 +53,7 @@ html, body {
 
 /* Navbar */
 .navbar {
+  margin-top: 10%;
   width: 80vw;
   margin: 10px auto 0;
   background: #9CB3D3;
