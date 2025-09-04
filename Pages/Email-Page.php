@@ -7,12 +7,12 @@
     <title>Email</title>
 </head>
 <body>
-   <div class="text-con">
+   <div class="text-con fade-in">
       <h1>GET IN TOUCH</h1>
     </div>
-    <div class="contact-container">
-        <div class="contact-box">
-            <div class="contact-info">
+    <div class="contact-container fade-in">
+        <div class="contact-box fade-in">
+            <div class="contact-info fade-in">
                 <div class="box-con"> 
                     <div class="text-info">
                         <h2>Contact for more Info</h2>
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Right Form -->
-        <div class="contact-form">
+        <div class="contact-form fade-in">
             <div class="cont-txt">
                 <!-- <h2>Send Email</h2> -->
                 <form action="Backend/SendEmail.php" method="POST">
@@ -63,5 +63,29 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const faders = document.querySelectorAll(".fade-in");
+
+        const appearOptions = {
+            threshold: 0.2,  // 20% visible
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target); // animate only once
+            }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+        });
+    </script>
+
 </body>
 </html>
