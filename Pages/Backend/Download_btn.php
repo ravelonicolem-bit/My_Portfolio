@@ -1,24 +1,41 @@
 <?php
-    $zip = new ZipArchive();
-    $zipFile = "Files/all_pdf.zip";
+$zip = new ZipArchive();
+$zipFile = __DIR__ . "/Files/all_pdf.zip"; // ✅ absolute path
 
-    if ($zip ->open($zipFile,ZipArchive::CREATE | ZipArchive::OVERWRITE)=== TRUE){
-        $files = ["Files/Resume.pdf", "Files/Cover_Letters.pdf"];
-        foreach ($files as $file){
-            if(file_exists($file)){
-                $zip->addFile($file,basename($file));
-            }
+// Make sure the Files directory exists and is writable
+$filesDir = __DIR__ . "/Files";
+if (!is_dir($filesDir)) {
+    die("❌ The directory 'Files' does not exist at: $filesDir");
+}
+if (!is_writable($filesDir)) {
+    die("❌ The directory 'Files' is not writable. Check permissions.");
+}
+
+if ($zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
+    $files = [
+        __DIR__ . "/Files/RAVELO_RESUME.pdf",
+        __DIR__ . "/Files/Certificate_of_Completion.pdf"
+    ];
+
+    foreach ($files as $file) {
+        if (file_exists($file)) {
+            $zip->addFile($file, basename($file));
+        } else {
+            echo "⚠ File not found: $file<br>";
         }
-    $zip ->close();
-
-    header("Content-Type: application/zip");
-    header("Conten-Diposition: attachment;filename=\"all_pdfs.zip\"");
-    header("content-length:" . filesize($zipFile));
-    readfile($zipFile);
-
-    unlink($zipFile);
-    exit;
-    }else{
-        echo "Failed to create ZIP File.";
     }
-?>
+    $zip->close();
+
+    if (file_exists($zipFile) && filesize($zipFile) > 22) {
+        header("Content-Type: application/zip");
+        header("Content-Disposition: attachment; filename=all_pdfs.zip");
+        header("Content-Length: " . filesize($zipFile));
+        readfile($zipFile);
+        unlink($zipFile);
+        exit;
+    } else {
+        echo "❌ ZIP file is empty or missing.";
+    }
+} else {
+    echo "❌ Failed to create ZIP File at: $zipFile";
+}

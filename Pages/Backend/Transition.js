@@ -1,14 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".skill-card");
+        const faders = document.querySelectorAll(".fade-in");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target); // animate only once
-        }
-      });
-    }, { threshold: 0.2 });
+        const appearOptions = {
+            threshold: 0.2,  // 20% visible
+            rootMargin: "0px 0px -50px 0px"
+        };
 
-    cards.forEach(card => observer.observe(card));
-  });
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target); // animate only once
+            }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+        });

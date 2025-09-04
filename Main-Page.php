@@ -17,9 +17,10 @@
       </div>
 
       <!-- Button -->
-      <div class="buttonContainer" id="files-btn">
+    <div class="buttonContainer" id="files-btn">
         <button class="download-btn" id="downloadBtn">DOWNLOAD FILES</button>
-      </div>
+    </div>
+
     </div>
   </div>
 </section>
@@ -35,6 +36,13 @@
 <section class="email">
      <?php include 'Pages/Email-Page.php'?>
 </section>
-<script src="Pages/Backend/DBtn.js"></script>
+
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function () {
+    window.location.href = "Pages/Backend/Download_btn.php"; // call your PHP script
+});
+</script>
+
+<script src="Pages/Backend/Download_btn.php"></script>
 </body>
 </html>
